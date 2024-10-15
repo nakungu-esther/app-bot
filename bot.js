@@ -29,7 +29,7 @@ const connectDB = async () => {
         console.log('MongoDB connected...');
     } catch (err) {
         console.error('MongoDB connection error:', err);
-        process.exit(1); // Exit the process if there's an error
+        process.exit(1); 
     }
 };
 
@@ -87,7 +87,7 @@ const sendNotification = (message) => {
     twilioClient.messages.create({
         body: message,
         from: '+19093231204', // Your Twilio phone number
-        to: '+256760794900' // Replace with your phone number
+        to: '+256760794' // Replace with your phone number
     })
     .then((message) => console.log('SMS sent:', message.sid))
     .catch((error) => console.error('Error sending SMS:', error));
